@@ -17,8 +17,9 @@ FILE_NAME = "test"
 record_counter = 0
 match_counter = 0
 
+
 def _get_group_id_from_notes(input_str):
-    if match := re.search(r'^[\s\S]*Group ID:\s(\d+)[.]$', input_str):
+    if match := re.search(r'Group ID:[\s]*(\d+)[.]*$', input_str):
         return match.groups()[0]
 
 
